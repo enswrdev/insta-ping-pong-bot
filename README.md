@@ -8,12 +8,12 @@ It combines **HSV Color Tracking**, **Trajectory Reflection Prediction**, and a 
 
 ## ✨ Key Features
 
-- **📱 Scrcpy Auto-Detection:** Automatically hooks into active Android mirror windows on Windows using Win32 APIs.
-- **🔴 Red Ball Tracking:** Highly optimized HSV range mask specifically calibrated for detecting **RED** target balls.
-- **📐 Trajectory & Wall Reflection Prediction:** Calculates velocity vectors (`v_x`, `v_y`) to predict impact positions while accounting for wall reflections.
-- **🛡️ Hybrid Local Virtual Wall (Micro-Jitter):** Rapidly sweeps across a `±30 px` range around the predicted target at `1 ms` intervals. This effectively increases the paddle's coverage area and helps compensate for input latency.
-- **🖱️ Automatic Touch-Hold Simulation:** Toggling modes automatically triggers Win32 `mouse_down` events to drag the paddle without requiring manual mouse clicks.
-- **👁️ Real-Time OpenCV HUD:** Displays target centroids, trajectory impact markers, and local wall shield boundaries in real time.
+* **📱 Scrcpy Auto-Detection:** Automatically hooks into active Android mirror windows on Windows using Win32 APIs.
+* **🔴 Red Ball Tracking:** Highly optimized HSV range mask specifically calibrated for detecting **RED** target balls.
+* **📐 Trajectory & Wall Reflection Prediction:** Calculates velocity vectors (`v_x`, `v_y`) to predict impact positions while accounting for wall reflections.
+* **🛡️ Hybrid Local Virtual Wall (Micro-Jitter):** Rapidly sweeps across a `±30 px` range around the predicted target at `1 ms` intervals. This effectively increases the paddle's coverage area and helps compensate for input latency.
+* **🖱️ Automatic Touch-Hold Simulation:** Toggling modes automatically triggers Win32 `mouse_down` events to drag the paddle without requiring manual mouse clicks.
+* **👁️ Real-Time OpenCV HUD:** Displays target centroids, trajectory impact markers, and local wall shield boundaries in real time.
 
 ---
 
@@ -44,19 +44,30 @@ The bot is designed for **Windows OS** and relies on Win32 API functions for low
 
 ## 📦 Installation
 
-### 1. Clone the Repository
+### 1. Download the Bot
 
-```bash
-git clone https://github.com/eyupensrr/insta-ping-pong-bot.git
-cd insta-ping-pong-bot
+Go to the **[Latest Release Tab](https://github.com/eyupensrr/insta-ping-pong-bot/releases/latest)** and download the latest version named:
+
+```text
+insta_ping_pong_bot.py
 ```
+
+or the packaged ZIP archive if available.
 
 ### 2. Install Python Dependencies
 
-Make sure you have **Python 3.8+** installed, then run:
+Make sure you have **Python 3.8+** installed.
+
+Open a terminal in the directory containing the bot and run:
 
 ```bash
 pip install opencv-python numpy mss
+```
+
+### 3. Run the Bot
+
+```bash
+python insta_ping_pong_bot.py
 ```
 
 ---
@@ -74,18 +85,18 @@ Open an Instagram DM, send a single 🏓 emoji, and tap it to launch the Ping-Po
 ### 3. Run the Bot
 
 ```bash
-python hybrid_bot.py
+python insta_ping_pong_bot.py
 ```
 
 ### 4. Keyboard Controls
 
-| Key | Action |
-| --- | --- |
-| **`Z`** | Toggle **NORMAL MODE** — tracks the current ball X position + Local Wall |
-| **`X`** | Toggle **AGGRESSIVE MODE** — predicts the impact point + wall reflections + Local Wall |
-| **`UP` Arrow** | Fine-tune the paddle alignment line upward |
-| **`DOWN` Arrow** | Fine-tune the paddle alignment line downward |
-| **`Q`** | Exit the bot and release the mouse drag |
+| Key              | Action                                                                                 |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| **`Z`**          | Toggle **NORMAL MODE** — tracks the current ball X position + Local Wall               |
+| **`X`**          | Toggle **AGGRESSIVE MODE** — predicts the impact point + wall reflections + Local Wall |
+| **`UP` Arrow**   | Fine-tune the paddle alignment line upward                                             |
+| **`DOWN` Arrow** | Fine-tune the paddle alignment line downward                                           |
+| **`Q`**          | Exit the bot and release the mouse drag                                                |
 
 ---
 
@@ -115,11 +126,11 @@ This effectively transforms a single cursor position into a wider moving coverag
 
 ## ⚠️ Known Limitations & Performance Notes
 
-- **🏆 High-Score Potential:** The bot has achieved scores of **36+** in fast-paced games.
-- **📉 Frame-Drop Sensitivity:** At extreme ball speeds, sudden frame drops can cause the calculated velocity vector to change significantly between frames.
-- **🎯 Position Skips:** These frame drops may result in brief prediction or position skips.
-- **⚙️ Jitter Adjustment:** Increasing or decreasing `JITTER_OFFSET` may help depending on performance.
-- **🚀 Scrcpy Performance:** Increasing the Scrcpy frame rate can reduce tracking issues:
+* **🏆 High-Score Potential:** The bot has achieved scores of **36+** in fast-paced games.
+* **📉 Frame-Drop Sensitivity:** At extreme ball speeds, sudden frame drops can cause the calculated velocity vector to change significantly between frames.
+* **🎯 Position Skips:** These frame drops may result in brief prediction or position skips.
+* **⚙️ Jitter Adjustment:** Increasing or decreasing `JITTER_OFFSET` may help depending on performance.
+* **🚀 Scrcpy Performance:** Increasing the Scrcpy frame rate can reduce tracking issues:
 
 ```bash
 scrcpy --max-fps=60
@@ -132,3 +143,10 @@ Actual performance depends on the device, connection type, screen resolution, Sc
 ## 📜 License
 
 This project is open-source and distributed under the **MIT License**.
+
+---
+
+## 🔗 Links
+
+* **Repository:** [github.com/eyupensrr/insta-ping-pong-bot](https://github.com/eyupensrr/insta-ping-pong-bot/)
+* **Latest Release:** [Download the latest version](https://github.com/eyupensrr/insta-ping-pong-bot/releases/latest)
