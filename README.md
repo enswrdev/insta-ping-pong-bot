@@ -46,7 +46,7 @@ The bot is designed for **Windows OS** and relies on Win32 API functions for low
 
 ### 1. Download the Bot
 
-Go to the **[Latest Release Tab](https://github.com/eyupensrr/insta-ping-pong-bot/releases/latest)** and download the latest version named:
+Go to the **[Latest Release Tab](https://github.com/enswrdev/insta-ping-pong-bot/releases/latest)** and download the latest version named:
 
 ```text
 insta_ping_pong_bot.py
@@ -148,5 +148,5 @@ This project is open-source and distributed under the **MIT License**.
 
 ## 🔗 Links
 
-* **Repository:** [github.com/eyupensrr/insta-ping-pong-bot](https://github.com/eyupensrr/insta-ping-pong-bot/)
-* **Latest Release:** [Download the latest version](https://github.com/eyupensrr/insta-ping-pong-bot/releases/latest)
+* **Repository:** [github.com/enswrdev/insta-ping-pong-bot](https://github.com/enswrdev/insta-ping-pong-bot/)
+* **Latest Release:** [Download the latest version](https://github.com/enswrdev/insta-ping-pong-bot/releases/latest)
